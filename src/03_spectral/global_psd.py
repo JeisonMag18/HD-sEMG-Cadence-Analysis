@@ -1,7 +1,5 @@
 """PSD global HD-sEMG (IA753): todas as gravações em cache, 21 participantes.
 
-Uso: python global_psd.py
-
 Agregação hierárquica e balanceada:
   64 canais -> gravação -> média das repetições por sujeito/tarefa/condição
   -> média das tarefas por sujeito/condição -> média dos sujeitos.
@@ -9,7 +7,7 @@ Agregação hierárquica e balanceada:
 Welch é calculado sobre 5--40 s de EMG bruto (não sobre o RMS), com segmentos
 Hann de ~1 s e 50% de sobreposição. Mantém os dados de entrada intactos.
 A análise global de PSD não é idêntica às MNF/MDF derivadas de janelas móveis
-individuais de 2 s; essa distinção deve constar no artigo.
+individuais de 2 s.
 """
 from collections import defaultdict
 import numpy as np
